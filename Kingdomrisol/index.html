@@ -1,0 +1,2701 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+04/02/2025 15:10:19 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Lobster:400|Inter:500,400,700,600");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/679fd728439dd9fcf8bf215e.679fd728439dd9fcf8bf2161.vuH2zdR.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --black-2: #00000099;
+  --white: #ffffff;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 48px;
+  --font-size-xxxl: 64px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-lobster: "Lobster", Helvetica;
+}
+.inter-medium-black-14px {
+  color: var(--black-2);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-semi-bold-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-semi-bold-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-medium-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-normal-black-16px {
+  color: var(--black-2);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-black-48px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-semi-bold-white-14px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+:root {
+}
+
+
+/* screen - home-page */
+
+.home-page {
+  background-color: var(--white);
+  height: 6986px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.home-page .navigation-xVxyAW {
+  background-color: transparent;
+  height: 30px;
+  left: 80px;
+  position: absolute;
+  top: 40px;
+  width: 1282px;
+}
+
+.home-page .kingdom-risol-vfEzI2 {
+  color: var(--black);
+}
+
+.home-page .group-824-vfEzI2 {
+  left: 506px;
+  top: 6px;
+  width: 394px;
+}
+
+.home-page .home-BzGth3 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.32px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-page .blog-BzGth3 {
+  left: 105px;
+}
+
+.home-page .contact-BzGth3 {
+  left: 199px;
+}
+
+.home-page .about-us-BzGth3 {
+  left: 319px;
+}
+
+.home-page .social-vfEzI2 {
+  height: 22px;
+  left: 1146px;
+  top: 4px;
+  width: 134px;
+}
+
+.home-page .x001-facebook-EUchEf {
+  left: 0px;
+  top: 1px;
+}
+
+.home-page .x004-instagram-EUchEf {
+  left: 112px;
+  top: 0px;
+}
+
+.home-page .shape-SL4uFb {
+  height: 22px;
+  left: 0px;
+  top: 0px;
+  width: 22px;
+}
+
+.home-page .shape-5o0ljz {
+  height: 11px;
+  left: 6px;
+  top: 6px;
+  width: 11px;
+}
+
+.home-page .featured-recipe-xVxyAW {
+  background-color: transparent;
+  height: 640px;
+  left: 80px;
+  position: absolute;
+  top: 150px;
+  width: 1284px;
+}
+
+.home-page .rectangle-1-KidGF3 {
+  background-color: transparent;
+  height: 640px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 620px;
+}
+
+.home-page .mask-group-KidGF3 {
+  height: 640px;
+  left: 620px;
+  top: 0px;
+  width: 660px;
+}
+
+.home-page .title-KidGF3 {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 50px;
+  letter-spacing: -2.56px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 127px;
+  width: 520px;
+}
+
+.home-page .nikmati-dalam-setiap-KidGF3 {
+  background-color: transparent;
+  height: auto;
+  left: 50px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 305px;
+  width: 520px;
+}
+
+.home-page .group-825-KidGF3 {
+  background-color: transparent;
+  height: 50px;
+  left: 50px;
+  position: absolute;
+  top: 535px;
+  width: 182px;
+}
+
+.home-page .whats-app-image-2025-01-24-at-105540-17xHx5 {
+  background-color: transparent;
+  height: 50px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 50px;
+}
+
+.home-page .among-17xHx5 {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 66px;
+  letter-spacing: -0.32px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-page .x03-februari-2025-17xHx5 {
+  background-color: transparent;
+  height: auto;
+  left: 66px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  width: auto;
+}
+
+.home-page .group-831-KidGF3 {
+  height: 40px;
+  left: 50px;
+  top: 391px;
+  width: 139px;
+}
+
+.home-page .rectangle-4-48P752 {
+  width: 139px;
+}
+
+.home-page .group-829-48P752 {
+  left: 16px;
+  position: absolute;
+  top: 8px;
+}
+
+.home-page .group-832-KidGF3 {
+  height: 40px;
+  left: 205px;
+  top: 391px;
+  width: 119px;
+}
+
+.home-page .rectangle-4-Va6Xaj {
+  width: 119px;
+}
+
+.home-page .group-830-Va6Xaj {
+  left: 16px;
+  position: absolute;
+  top: 8px;
+  width: 76px;
+}
+
+.home-page .snack-5D80s6 {
+  background-color: transparent;
+  height: auto;
+  left: 34px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  width: auto;
+}
+
+.home-page .group-826-KidGF3 {
+  left: 370px;
+  top: 530px;
+  width: 200px;
+}
+
+.home-page .rectangle-3-UjPDat {
+  background-color: var(--black);
+  width: 200px;
+}
+
+.home-page .group-833-UjPDat {
+  height: 24px;
+  left: 37px;
+  top: 18px;
+  width: 129px;
+}
+
+.home-page .play-circle-jxz0WL {
+  background-color: transparent;
+  height: 24px;
+  left: 103px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.home-page .view-kingdom-jxz0WL {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  width: auto;
+}
+
+.home-page .group-828-KidGF3 {
+  background-color: transparent;
+  height: 125px;
+  left: 20px;
+  position: absolute;
+  top: 30px;
+  width: 236px;
+}
+
+.home-page .rectangle-5-xVxyAW {
+  background-color: transparent;
+  height: 600px;
+  left: 0px;
+  position: absolute;
+  top: 170px;
+  width: 40px;
+}
+
+.home-page .rectangle-6-xVxyAW {
+  background-color: transparent;
+  height: 600px;
+  left: 1400px;
+  position: absolute;
+  top: 170px;
+  width: 40px;
+}
+
+.home-page .categories-xVxyAW {
+  background-color: transparent;
+  height: 342px;
+  left: 80px;
+  position: absolute;
+  top: 950px;
+  width: 1282px;
+}
+
+.home-page .group-842-ULD3El {
+  background-color: transparent;
+  height: 202px;
+  left: 0px;
+  position: absolute;
+  top: 140px;
+  width: 1280px;
+}
+
+.home-page .group-836-T4Wby5 {
+  background-color: transparent;
+  height: 202px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 182px;
+}
+
+.home-page .rectangle-7-xSO2Yh {
+  background: linear-gradient(180deg, rgba(250.00000029802322, 218.00000220537186, 122.00000032782555, 0.10000000149011612) 0%);
+}
+
+.home-page .risol-mayo-sosis-timun-xSO2Yh {
+  left: 35px;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  text-align: center;
+  top: 139px;
+  width: auto;
+}
+
+.home-page .american-risol-1-xSO2Yh {
+  background-color: transparent;
+  height: 100px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.home-page .group-837-T4Wby5 {
+  background-color: transparent;
+  height: 202px;
+  left: 220px;
+  position: absolute;
+  top: 0px;
+  width: 182px;
+}
+
+.home-page .rectangle-7-L7xt2H {
+  background: linear-gradient(180deg, rgba(108.00000116229057, 198.00000339746475, 63.000000044703484, 0) 0%, rgba(108.14478099346161, 197.62499392032623, 63.404689729213715, 0.10000000149011612) 100%);
+}
+
+.home-page .risol-mayo-sosis-telur-L7xt2H {
+  left: 40px;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  text-align: center;
+  top: 139px;
+  width: auto;
+}
+
+.home-page .group-879-L7xt2H {
+  background-color: transparent;
+  height: 120px;
+  left: 40px;
+  position: absolute;
+  top: 0px;
+  width: 120px;
+}
+
+.home-page .image-19-BnQKrH {
+  background-color: transparent;
+  height: 140px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 140px;
+}
+
+.home-page .resep-risoles-mayonaise-BnQKrH {
+  background-color: transparent;
+  height: 100px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.home-page .group-838-T4Wby5 {
+  background-color: transparent;
+  height: 202px;
+  left: 440px;
+  position: absolute;
+  top: 0px;
+  width: 182px;
+}
+
+.home-page .rectangle-7-pYDPlu {
+  background: linear-gradient(180deg, rgba(204.00000303983688, 38.0000015348196, 27.000000290572643, 0) 0%, rgba(204.00000303983688, 38.0000015348196, 27.000000290572643, 0.10000000149011612) 100%);
+}
+
+.home-page .risol-mayo-sosis-coklat-pYDPlu {
+  left: 34px;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  text-align: center;
+  top: 139px;
+  width: auto;
+}
+
+.home-page .image-20-pYDPlu {
+  background-color: transparent;
+  height: 140px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 140px;
+}
+
+.home-page .donna-jos-sia-pYDPlu {
+  background-color: transparent;
+  height: 100px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.home-page .group-839-T4Wby5 {
+  background-color: transparent;
+  height: 202px;
+  left: 660px;
+  position: absolute;
+  top: 0px;
+  width: 182px;
+}
+
+.home-page .rectangle-7-F9ncQu {
+  background: linear-gradient(180deg, rgba(240.00000089406967, 158.00000578165054, 0, 0) 0%, rgba(240.12499898672104, 158.4824886918068, 0, 0.10000000149011612) 100%);
+}
+
+.home-page .risol-mayo-sosissayur-F9ncQu {
+  background-color: transparent;
+  height: auto;
+  left: 36px;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 139px;
+  width: auto;
+}
+
+.home-page .image-21-F9ncQu {
+  background-color: transparent;
+  height: 140px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 140px;
+}
+
+.home-page .download-1-F9ncQu {
+  background-color: transparent;
+  height: 100px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.home-page .group-840-T4Wby5 {
+  background-color: transparent;
+  height: 202px;
+  left: 880px;
+  position: absolute;
+  top: 0px;
+  width: 182px;
+}
+
+.home-page .rectangle-7-sUnrFj {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05000000074505806) 100%);
+}
+
+.home-page .risol-mayo-sosis-ayam-sUnrFj {
+  left: 37px;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  text-align: center;
+  top: 139px;
+  width: auto;
+}
+
+.home-page .image-22-sUnrFj {
+  background-color: transparent;
+  height: 140px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 140px;
+}
+
+.home-page .premium-photo-_-riso-sUnrFj {
+  background-color: transparent;
+  height: 100px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.home-page .group-841-T4Wby5 {
+  background-color: transparent;
+  height: 202px;
+  left: 1100px;
+  position: absolute;
+  top: 0px;
+  width: 182px;
+}
+
+.home-page .rectangle-7-fQZ45e {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.05000000074505806) 100%);
+}
+
+.home-page .risol-mayo-sosis-wortel-fQZ45e {
+  left: 33px;
+  letter-spacing: -0.36px;
+  line-height: normal;
+  text-align: center;
+  top: 139px;
+  width: auto;
+}
+
+.home-page .image-23-fQZ45e {
+  background-color: transparent;
+  height: 140px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 140px;
+}
+
+.home-page .resep-tigor-sayur-pedas-dari-wawawiati-fQZ45e {
+  background-color: transparent;
+  height: 100px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.home-page .kategori-ULD3El {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  width: auto;
+}
+
+.home-page .group-843-ULD3El {
+  background-color: transparent;
+  height: 60px;
+  left: 1080px;
+  position: absolute;
+  top: 0px;
+  width: 202px;
+}
+
+.home-page .rectangle-3-L8lGix {
+  background-color: #fada7a;
+  width: 200px;
+}
+
+.home-page .semua-kategori-L8lGix {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 40px;
+  letter-spacing: -0.32px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 20px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-page .more-recipes-xVxyAW {
+  background-color: transparent;
+  height: 875px;
+  left: 80px;
+  position: absolute;
+  top: 5115px;
+  width: 1365px;
+}
+
+.home-page .cobalah-risolnya-dan-YSNoOx {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home-page .coba-dan-nikmatilah-YSNoOx {
+  background-color: transparent;
+  height: auto;
+  left: 741px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  width: 620px;
+}
+
+.home-page .group-866-YSNoOx {
+  height: 316px;
+  left: 165px;
+  top: 203px;
+  width: 292px;
+}
+
+.home-page .group-831-8ExrQY {
+  height: 24px;
+  left: 0px;
+  top: 292px;
+  width: 92px;
+}
+
+.home-page .group-829-XT2zzG {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-8ExrQY {
+  height: 24px;
+  left: 131px;
+  top: 292px;
+  width: 65px;
+}
+
+.home-page .group-830-zZgzA1 {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-8ExrQY {
+  height: 200px;
+  left: 0px;
+  top: 0px;
+  width: 290px;
+}
+
+.home-page .group-852-8ExrQY {
+  left: 226px;
+  top: 16px;
+}
+
+.home-page .heart-UY7y7M {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .risol-mayo-timun-sosis-8ExrQY {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.72px;
+  line-height: 26px;
+  position: absolute;
+  text-align: left;
+  top: 216px;
+  width: 290px;
+}
+
+.home-page .group-870-YSNoOx {
+  background-color: transparent;
+  height: 316px;
+  left: 165px;
+  position: absolute;
+  top: 559px;
+  width: 292px;
+}
+
+.home-page .group-831-G6hYaE {
+  height: 24px;
+  left: 0px;
+  top: 292px;
+  width: 92px;
+}
+
+.home-page .group-829-qNj9tw {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-G6hYaE {
+  height: 24px;
+  left: 131px;
+  top: 292px;
+  width: 65px;
+}
+
+.home-page .group-830-2zaVxn {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-G6hYaE {
+  height: 200px;
+  left: 0px;
+  top: 0px;
+  width: 290px;
+}
+
+.home-page .group-852-G6hYaE {
+  left: 226px;
+  top: 16px;
+}
+
+.home-page .heart-j4fQkg {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .risol-mayo-sosis-sayur-G6hYaE {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.72px;
+  line-height: 26px;
+  position: absolute;
+  text-align: left;
+  top: 216px;
+  width: 290px;
+}
+
+.home-page .group-867-YSNoOx {
+  background-color: transparent;
+  height: 316px;
+  left: 495px;
+  position: absolute;
+  top: 203px;
+  width: 292px;
+}
+
+.home-page .group-831-QtDJlp {
+  height: 24px;
+  left: 0px;
+  top: 292px;
+  width: 92px;
+}
+
+.home-page .group-829-7DKQP4 {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-QtDJlp {
+  height: 24px;
+  left: 131px;
+  top: 292px;
+  width: 65px;
+}
+
+.home-page .group-830-ClxC1o {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-QtDJlp {
+  height: 200px;
+  left: 0px;
+  top: 0px;
+  width: 290px;
+}
+
+.home-page .group-852-QtDJlp {
+  left: 226px;
+  top: 16px;
+}
+
+.home-page .heart-fxfpE5 {
+  height: 24px;
+  left: 12px;
+  top: 12px;
+  width: 24px;
+}
+
+.home-page .risol-mayo-sosis-telur-QtDJlp {
+  left: 0px;
+  letter-spacing: -0.72px;
+  line-height: 26px;
+  text-align: left;
+  top: 216px;
+  width: 290px;
+}
+
+.home-page .group-871-YSNoOx {
+  background-color: transparent;
+  height: 316px;
+  left: 495px;
+  position: absolute;
+  top: 559px;
+  width: 292px;
+}
+
+.home-page .group-831-OaGcCe {
+  height: 24px;
+  left: 0px;
+  top: 292px;
+  width: 92px;
+}
+
+.home-page .group-829-XYTrGC {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-OaGcCe {
+  height: 24px;
+  left: 131px;
+  top: 292px;
+  width: 65px;
+}
+
+.home-page .group-830-EG5AMr {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-OaGcCe {
+  height: 200px;
+  left: 0px;
+  top: 0px;
+  width: 290px;
+}
+
+.home-page .group-852-OaGcCe {
+  left: 226px;
+  top: 16px;
+}
+
+.home-page .heart-LbmTe5 {
+  height: 24px;
+  left: 12px;
+  top: 12px;
+  width: 24px;
+}
+
+.home-page .risol-mayo-sosis-ayam-OaGcCe {
+  left: 0px;
+  letter-spacing: -0.72px;
+  line-height: 26px;
+  text-align: left;
+  top: 216px;
+  width: 290px;
+}
+
+.home-page .group-868-YSNoOx {
+  background-color: transparent;
+  height: 316px;
+  left: 825px;
+  position: absolute;
+  top: 203px;
+  width: 292px;
+}
+
+.home-page .group-831-nt67Bx {
+  height: 24px;
+  left: 0px;
+  top: 292px;
+  width: 92px;
+}
+
+.home-page .group-829-aUtuUu {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-nt67Bx {
+  height: 24px;
+  left: 131px;
+  top: 292px;
+  width: 65px;
+}
+
+.home-page .group-830-zGgCZi {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-nt67Bx {
+  height: 200px;
+  left: 0px;
+  top: 0px;
+  width: 290px;
+}
+
+.home-page .group-852-nt67Bx {
+  left: 226px;
+  top: 16px;
+}
+
+.home-page .heart-AwVmPY {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .risol-mayo-sosis-coklat-nt67Bx {
+  left: 0px;
+  letter-spacing: -0.72px;
+  line-height: 26px;
+  text-align: left;
+  top: 216px;
+  width: 290px;
+}
+
+.home-page .group-872-YSNoOx {
+  background-color: transparent;
+  height: 316px;
+  left: 825px;
+  position: absolute;
+  top: 559px;
+  width: 292px;
+}
+
+.home-page .group-831-aRjcSF {
+  height: 24px;
+  left: 0px;
+  top: 292px;
+  width: 92px;
+}
+
+.home-page .group-829-2tor8X {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-aRjcSF {
+  height: 24px;
+  left: 131px;
+  top: 292px;
+  width: 65px;
+}
+
+.home-page .group-830-xxXbH8 {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-aRjcSF {
+  height: 200px;
+  left: 0px;
+  top: 0px;
+  width: 290px;
+}
+
+.home-page .group-852-aRjcSF {
+  left: 226px;
+  top: 16px;
+}
+
+.home-page .heart-OYi4q1 {
+  height: 24px;
+  left: 12px;
+  top: 12px;
+  width: 24px;
+}
+
+.home-page .risol-mayo-sosis-wortel-aRjcSF {
+  left: 0px;
+  letter-spacing: -0.72px;
+  line-height: 26px;
+  text-align: left;
+  top: 216px;
+  width: 290px;
+}
+
+.home-page .instagram-xVxyAW {
+  background-color: transparent;
+  height: 964px;
+  left: 0px;
+  position: absolute;
+  top: 3991px;
+  width: 1440px;
+}
+
+.home-page .rectangle-13-14tSxg {
+  background: linear-gradient(180deg, rgb(249.00000035762787, 235.0000011920929, 196.00000351667404) 100%);
+  background-color: transparent;
+  height: 964px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+
+.home-page .group-826-14tSxg {
+  left: 620px;
+  top: 824px;
+  width: 229px;
+}
+
+.home-page .rectangle-3-BtNt03 {
+  background-color: #fada7a;
+  width: 229px;
+}
+
+.home-page .group-833-BtNt03 {
+  height: 17px;
+  left: 32px;
+  top: 21px;
+  width: 128px;
+}
+
+.home-page .visit-our-instagram-CxbwhJ {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 0px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home-page .group-857-14tSxg {
+  background-color: transparent;
+  height: 138px;
+  left: 285px;
+  position: absolute;
+  top: 80px;
+  width: 874px;
+}
+
+.home-page .check-out-kingdom_risol-on-instagram-aEYo1k {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: auto;
+}
+
+.home-page .buruan-cek-instagram-aEYo1k {
+  background-color: transparent;
+  height: auto;
+  left: 15px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 82px;
+  width: 840px;
+}
+
+.home-page .subscribe-card-xVxyAW {
+  background-color: transparent;
+  height: 442px;
+  left: 80px;
+  position: absolute;
+  top: 6143px;
+  width: 1280px;
+}
+
+.home-page .mask-group-gKaU4I {
+  height: 442px;
+  left: 0px;
+  top: 0px;
+  width: 1280px;
+}
+
+.home-page .group-874-gKaU4I {
+  background-color: transparent;
+  height: 282px;
+  left: 202px;
+  position: absolute;
+  top: 80px;
+  width: 672px;
+}
+
+.home-page .order-sekarang-keburu-habis-CfxkCz {
+  background-color: transparent;
+  height: auto;
+  left: 15px;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home-page .nikmati-setiap-perja-CfxkCz {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 82px;
+  width: 620px;
+}
+
+.home-page .rectangle-18-CfxkCz {
+  background-color: var(--white);
+  border-radius: 24px;
+  height: 80px;
+  left: 70px;
+  position: absolute;
+  top: 202px;
+  width: 480px;
+}
+
+.home-page .your-email-address-CfxkCz {
+  background-color: transparent;
+  color: #00000066;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 102px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 233px;
+  width: auto;
+}
+
+.home-page .group-826-CfxkCz {
+  left: 380px;
+  top: 212px;
+  width: 162px;
+}
+
+.home-page .rectangle-3-rCkMPl {
+  background-color: var(--black);
+  width: 160px;
+}
+
+.home-page .subscribe-rCkMPl {
+  background-color: transparent;
+  height: auto;
+  left: 47px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  width: auto;
+}
+
+.home-page .footer-xVxyAW {
+  background-color: transparent;
+  height: 2103px;
+  left: 80px;
+  position: absolute;
+  top: 4834px;
+  width: 1280px;
+}
+
+.home-page .group-875-YuF6ZZ {
+  background-color: transparent;
+  height: 74px;
+  left: 0px;
+  position: absolute;
+  top: 1911px;
+  width: 404px;
+}
+
+.home-page .kingdom-risol-UFcTyG {
+  color: #ff7426;
+}
+
+.home-page .solusi-enak-tepat-da-UFcTyG {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 46px;
+  width: 400px;
+}
+
+.home-page .group-824-YuF6ZZ {
+  left: 999px;
+  top: 1939px;
+  width: 287px;
+}
+
+.home-page .blog-YlRr7e {
+  left: 0px;
+}
+
+.home-page .contact-YlRr7e {
+  left: 94px;
+}
+
+.home-page .about-us-YlRr7e {
+  left: 214px;
+}
+
+.home-page .vector-1-YuF6ZZ {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 2032px;
+  width: 1280px;
+}
+
+.home-page .social-YuF6ZZ {
+  height: 2103px;
+  left: 721px;
+  top: 0px;
+  width: 559px;
+}
+
+.home-page .x001-facebook-CKyG7E {
+  left: 425px;
+  top: 2082px;
+}
+
+.home-page .x004-instagram-CKyG7E {
+  left: 537px;
+  top: 2081px;
+}
+
+.home-page .shape-z502sv {
+  height: 22px;
+  left: 0px;
+  top: 0px;
+  width: 22px;
+}
+
+.home-page .shape-dLz6G0 {
+  height: 11px;
+  left: 6px;
+  top: 6px;
+  width: 11px;
+}
+
+.home-page .x004-instagram-N5UIo9 {
+  left: 0px;
+  top: 0px;
+}
+
+.home-page .shape-JTIymP {
+  height: 22px;
+  left: 0px;
+  top: 0px;
+  width: 22px;
+}
+
+.home-page .shape-zskgzx {
+  height: 11px;
+  left: 6px;
+  top: 6px;
+  width: 11px;
+}
+
+.home-page .recipes-xVxyAW {
+  background-color: transparent;
+  height: 1614px;
+  left: 80px;
+  position: absolute;
+  top: 1477px;
+  width: 1284px;
+}
+
+.home-page .review-kingdom-risol-HoLrRo {
+  background-color: transparent;
+  height: auto;
+  left: 402px;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home-page .terdapat-review-kons-HoLrRo {
+  background-color: transparent;
+  height: auto;
+  left: 284px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 80px;
+  width: 706px;
+}
+
+.home-page .group-858-HoLrRo {
+  background-color: transparent;
+  height: 434px;
+  left: 0px;
+  position: absolute;
+  top: 232px;
+  width: 400px;
+}
+
+.home-page .group-845-McvOCx {
+  position: relative;
+}
+
+.home-page .rectangle-8-ZHj3cf {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-ZHj3cf {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-rjkokQ {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-ZHj3cf {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-TZTUpI {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-ZHj3cf {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .group-852-ZHj3cf {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-nUxSRm {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .group-863-HoLrRo {
+  background-color: transparent;
+  height: 434px;
+  left: 0px;
+  position: absolute;
+  top: 1180px;
+  width: 400px;
+}
+
+.home-page .group-845-ivKliH {
+  position: relative;
+}
+
+.home-page .rectangle-8-iqJH8Q {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-iqJH8Q {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-5p0J35 {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-iqJH8Q {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-ycgn1k {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-iqJH8Q {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .group-852-iqJH8Q {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-YZ25e1 {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .group-861-HoLrRo {
+  background-color: transparent;
+  height: 434px;
+  left: 0px;
+  position: absolute;
+  top: 706px;
+  width: 400px;
+}
+
+.home-page .group-845-olxw5w {
+  position: relative;
+}
+
+.home-page .rectangle-8-qGGZ2B {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-qGGZ2B {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-g3EAXY {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-qGGZ2B {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-PxqC8u {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-qGGZ2B {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .group-852-qGGZ2B {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-IYQdmH {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .group-859-HoLrRo {
+  background-color: transparent;
+  height: 434px;
+  left: 440px;
+  position: absolute;
+  top: 232px;
+  width: 400px;
+}
+
+.home-page .group-845-8cqVgY {
+  position: absolute;
+}
+
+.home-page .rectangle-8-EebyHL {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-EebyHL {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-KlCtlw {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-EebyHL {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-erDMXR {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-EebyHL {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .group-852-8cqVgY {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-8CZTGE {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .group-864-HoLrRo {
+  background-color: transparent;
+  height: 434px;
+  left: 440px;
+  position: absolute;
+  top: 1180px;
+  width: 400px;
+}
+
+.home-page .group-845-hvMlqB {
+  position: absolute;
+}
+
+.home-page .rectangle-8-xFujiM {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-xFujiM {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-kAkcXI {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-xFujiM {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-LP92QI {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-xFujiM {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .group-852-hvMlqB {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-GnB6rx {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .group-862-HoLrRo {
+  background-color: transparent;
+  height: 434px;
+  left: 440px;
+  position: absolute;
+  top: 706px;
+  width: 400px;
+}
+
+.home-page .group-845-dus6xD {
+  position: absolute;
+}
+
+.home-page .rectangle-8-Wglr0S {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-Wglr0S {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-Pl9Fz6 {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-Wglr0S {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-t0NJLH {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-Wglr0S {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .group-852-dus6xD {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-pdFStM {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .group-866-HoLrRo {
+  height: 434px;
+  left: 880px;
+  top: 706px;
+  width: 400px;
+}
+
+.home-page .group-845-9uXHhi {
+  position: absolute;
+}
+
+.home-page .rectangle-8-Tx6xnu {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-Tx6xnu {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-QH6zH6 {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-Tx6xnu {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-eeBbxa {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-Tx6xnu {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .group-852-9uXHhi {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-FvIUey {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .group-860-HoLrRo {
+  background-color: transparent;
+  height: 434px;
+  left: 880px;
+  position: absolute;
+  top: 232px;
+  width: 400px;
+}
+
+.home-page .group-845-l16DTu {
+  position: relative;
+}
+
+.home-page .rectangle-8-CFiikQ {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-CFiikQ {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-x7LH0A {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-CFiikQ {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-8bHMeD {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-CFiikQ {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .risol-mayo-sosis-timun-CFiikQ {
+  left: 24px;
+  letter-spacing: -0.96px;
+  line-height: 32px;
+  text-align: left;
+  top: 290px;
+  width: 352px;
+}
+
+.home-page .group-852-CFiikQ {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-k8xpXg {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .group-865-HoLrRo {
+  background-color: transparent;
+  height: 434px;
+  left: 880px;
+  position: absolute;
+  top: 1180px;
+  width: 400px;
+}
+
+.home-page .group-845-bx4IpM {
+  position: absolute;
+}
+
+.home-page .rectangle-8-gQQ4rC {
+  background: linear-gradient(180deg, rgb(248.62500607967377, 235.41679322719574, 195.7921850681305) 100%);
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.home-page .group-831-gQQ4rC {
+  height: 24px;
+  left: 24px;
+  top: 378px;
+  width: 92px;
+}
+
+.home-page .group-829-tQMLdi {
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-page .group-832-gQQ4rC {
+  height: 24px;
+  left: 155px;
+  top: 378px;
+  width: 65px;
+}
+
+.home-page .group-830-AjTiHR {
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.home-page .mask-group-gQQ4rC {
+  height: 250px;
+  left: 16px;
+  top: 16px;
+  width: 368px;
+}
+
+.home-page .group-852-bx4IpM {
+  left: 316px;
+  top: 36px;
+}
+
+.home-page .heart-fZMI5V {
+  height: 38px;
+  left: 4px;
+  top: 10px;
+  width: 40px;
+}
+
+.home-page .learn-more-xVxyAW {
+  background-color: transparent;
+  height: 597px;
+  left: 80px;
+  position: absolute;
+  top: 3234px;
+  width: 1280px;
+}
+
+.home-page .group-853-RJ9xsH {
+  background-color: transparent;
+  height: 356px;
+  left: 0px;
+  position: absolute;
+  top: 169px;
+  width: 525px;
+}
+
+.home-page .semua-dapat-menikmati-muda-mudi-gen-z-QkJ5V0 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home-page .kemudahan-dalam-seti-QkJ5V0 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 140px;
+  width: 508px;
+}
+
+.home-page .group-826-QkJ5V0 {
+  left: 0px;
+  top: 296px;
+  width: 182px;
+}
+
+.home-page .rectangle-3-luEBf3 {
+  background-color: var(--black);
+  width: 180px;
+}
+
+.home-page .selanjutnya-luEBf3 {
+  background-color: transparent;
+  height: auto;
+  left: 51px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  width: auto;
+}
+
+.home-page .group-880-RJ9xsH {
+  background-color: transparent;
+  height: 597px;
+  left: 570px;
+  position: absolute;
+  top: 0px;
+  width: 710px;
+}
+
+.home-page .rectangle-8-rqa5bB {
+  background: linear-gradient(180deg, rgb(249.00000035762787, 235.0000011920929, 196.00000351667404) 100%);
+  height: 500px;
+  left: 59px;
+  top: 97px;
+  width: 651px;
+}
+
+.home-page .risol-mayo-1-rqa5bB {
+  background-color: transparent;
+  height: 597px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 660px;
+}
+
+.home-page .vector-2-xVxyAW {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 110px;
+  width: 1440px;
+}
+
+.home-page .whats-app-image-2025-02-04-at-212757-xVxyAW {
+  height: 441px;
+  left: 920px;
+  top: 4288px;
+  width: 294px;
+}
+
+.home-page .whats-app-image-2025-02-04-at-212757-6iAz2g {
+  height: 440px;
+  left: 225px;
+  top: 4289px;
+  width: 284px;
+}
+
+.home-page .whats-app-image-2025-02-04-at-212751-xVxyAW {
+  background-color: transparent;
+  height: 440px;
+  left: 561px;
+  object-fit: cover;
+  position: absolute;
+  top: 4289px;
+  width: 300px;
+}
+
+.home-page .images-removebg-preview-1-xVxyAW {
+  background-color: transparent;
+  height: 26px;
+  left: 1278px;
+  object-fit: cover;
+  position: absolute;
+  top: 42px;
+  width: 26px;
+}
+
+.home-page .images-removebg-preview-2-xVxyAW {
+  background-color: transparent;
+  height: 26px;
+  left: 1280px;
+  object-fit: cover;
+  position: absolute;
+  top: 6913px;
+  width: 26px;
+}
+
+.home-page .about-us {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: -0.32px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-page .blog {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: -0.32px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-page .contact {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: -0.32px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-page .ellipse-4 {
+  background-color: var(--white);
+  border-radius: 24px;
+  height: 48px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 48px;
+}
+
+.home-page .fork-knife {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.home-page .group-824 {
+  background-color: transparent;
+  height: 19px;
+  position: absolute;
+}
+
+.home-page .group-826 {
+  background-color: transparent;
+  height: 60px;
+  position: absolute;
+}
+
+.home-page .group-829 {
+  background-color: transparent;
+  height: 24px;
+  width: 94px;
+}
+
+.home-page .group-830 {
+  background-color: transparent;
+  height: 24px;
+}
+
+.home-page .group-831 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-page .group-832 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-page .group-833 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-page .group-845 {
+  background-color: transparent;
+  height: 434px;
+  left: 0px;
+  top: 0px;
+  width: 402px;
+}
+
+.home-page .group-852 {
+  background-color: transparent;
+  height: 48px;
+  position: absolute;
+  width: 48px;
+}
+
+.home-page .group-866 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-page .heart {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-page .kingdom-risol {
+  background-color: transparent;
+  font-family: var(--font-family-lobster);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: auto;
+}
+
+.home-page .mask-group {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-page .oval {
+  background-color: var(--black);
+  border-radius: 0.73px;
+  height: 1px;
+  left: 16px;
+  position: absolute;
+  top: 4px;
+  width: 1px;
+}
+
+.home-page .rectangle-3 {
+  border-radius: 16px;
+  height: 60px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.home-page .rectangle-4 {
+  background-color: #0000000d;
+  border-radius: 30px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.home-page .rectangle-7 {
+  background-color: transparent;
+  border-radius: 30px;
+  height: 152px;
+  left: 0px;
+  position: absolute;
+  top: 50px;
+  width: 180px;
+}
+
+.home-page .rectangle-8 {
+  background-color: transparent;
+  border-radius: 30px;
+  position: absolute;
+}
+
+.home-page .risol {
+  background-color: transparent;
+  height: auto;
+  left: 34px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  width: auto;
+}
+
+.home-page .risol-mayo-isian-sosis-telur {
+  background-color: transparent;
+  height: auto;
+  left: 24px;
+  letter-spacing: -0.96px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 290px;
+  width: 352px;
+}
+
+.home-page .risol-mayo-isian-sosis-timun {
+  background-color: transparent;
+  height: auto;
+  left: 24px;
+  letter-spacing: -0.96px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 290px;
+  width: 352px;
+}
+
+.home-page .risol-mayo-sosis-ayam {
+  background-color: transparent;
+  height: auto;
+  position: absolute;
+}
+
+.home-page .risol-mayo-sosis-coklat {
+  background-color: transparent;
+  height: auto;
+  position: absolute;
+}
+
+.home-page .risol-mayo-sosis-telur {
+  background-color: transparent;
+  height: auto;
+  position: absolute;
+}
+
+.home-page .risol-mayo-sosis-timun {
+  background-color: transparent;
+  height: auto;
+  position: absolute;
+}
+
+.home-page .risol-mayo-sosis-wortel {
+  background-color: transparent;
+  height: auto;
+  position: absolute;
+}
+
+.home-page .shape {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-page .social {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-page .timer {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.home-page .whats-app-image-2025-02-04-at-212757 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.home-page .x001-facebook {
+  background-color: transparent;
+  height: 20px;
+  position: absolute;
+  width: 10px;
+}
+
+.home-page .x004-instagram {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  width: 22px;
+}
+
+.home-page .x30-menit {
+  background-color: transparent;
+  height: auto;
+  left: 34px;
+  letter-spacing: -0.28px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  width: auto;
+}
+</style></head><body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="home-page"><div class="container-center-horizontal"><div class="home-page screen " data-id="1:3"><div class="navigation-xVxyAW" data-id="1:4"><div class="kingdom-risol-vfEzI2 kingdom-risol" data-id="1:5">Kingdom Risol</div><div class="group-824-vfEzI2 group-824" data-id="1:6"><div class="home-BzGth3 inter-medium-black-16px" data-id="1:7">Home</div><div class="blog-BzGth3 blog inter-medium-black-16px" data-id="1:8">Blog</div><div class="contact-BzGth3 contact inter-medium-black-16px" data-id="1:9">Contact</div><div class="about-us-BzGth3 about-us inter-medium-black-16px" data-id="1:10">About us</div></div><div class="social-vfEzI2 social" data-id="1:11"><img class="x001-facebook-EUchEf x001-facebook" data-id="1:12" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/001-facebook-2@2x.png" alt="001-facebook"><div class="x004-instagram-EUchEf x004-instagram" data-id="1:16"><img class="shape-SL4uFb shape" data-id="1:17" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/shape-6.svg" alt="Shape"><img class="shape-5o0ljz shape" data-id="1:20" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/shape-7.svg" alt="Shape"><div class="oval" data-id="1:23"></div></div></div></div><div class="featured-recipe-xVxyAW" data-id="1:24"><img class="rectangle-1-KidGF3" data-id="1:25" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/rectangle-1-1.svg" alt="Rectangle 1"><img class="mask-group-KidGF3 mask-group" data-id="1:26" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-17.png" alt="Mask Group"><h1 class="title-KidGF3" data-id="1:29">Kingdom Risol Mayo</h1><p class="nikmati-dalam-setiap-KidGF3 inter-normal-black-16px" data-id="1:30">Nikmati dalam setiap kegigitan risol kami!</p><div class="group-825-KidGF3" data-id="1:31"><img class="whats-app-image-2025-01-24-at-105540-17xHx5" data-id="1:32" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/whatsapp-image-2025-01-24-at-10-55-40-1@2x.png" alt="WhatsApp Image 2025-01-24 at 10.55.40"><div class="among-17xHx5" data-id="1:33">Among</div><div class="x03-februari-2025-17xHx5 inter-medium-black-14px" data-id="1:34">03 Februari 2025</div></div><div class="group-831-KidGF3 group-831" data-id="1:35"><div class="rectangle-4-48P752 rectangle-4" data-id="1:36"></div><div class="group-829-48P752 group-829" data-id="1:37"><img class="timer" data-id="1:38" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:42">30 Menit</div></div></div><div class="group-832-KidGF3 group-832" data-id="1:43"><div class="rectangle-4-Va6Xaj rectangle-4" data-id="1:44"></div><div class="group-830-Va6Xaj group-830" data-id="1:45"><img class="fork-knife" data-id="1:46" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="snack-5D80s6 inter-medium-black-14px" data-id="1:50">Snack</div></div></div><div class="group-826-KidGF3 group-826" data-id="1:51"><div class="rectangle-3-UjPDat rectangle-3" data-id="1:52"></div><div class="group-833-UjPDat group-833" data-id="1:53"><img class="play-circle-jxz0WL" data-id="1:54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/playcircle-1@2x.png" alt="PlayCircle"><div class="view-kingdom-jxz0WL inter-semi-bold-white-14px" data-id="1:57">View Kingdom</div></div></div><img class="group-828-KidGF3" data-id="1:58" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/group-828-1@2x.png" alt="Group 828"></div><img class="rectangle-5-xVxyAW" data-id="1:63" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/rectangle-5-1.svg" alt="Rectangle 5"><img class="rectangle-6-xVxyAW" data-id="1:64" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/rectangle-6-1.svg" alt="Rectangle 6"><div class="categories-xVxyAW" data-id="1:65"><div class="group-842-ULD3El" data-id="1:66"><div class="group-836-T4Wby5" data-id="1:67"><div class="rectangle-7-xSO2Yh rectangle-7" data-id="1:68"></div><div class="risol-mayo-sosis-timun-xSO2Yh risol-mayo-sosis-timun inter-semi-bold-black-18px" data-id="1:69">Risol Mayo<br>Sosis+Timun</div><img class="american-risol-1-xSO2Yh" data-id="1:70" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/american-risol--1--1@2x.png" alt="American Risol (1)"></div><div class="group-837-T4Wby5" data-id="1:71"><div class="rectangle-7-L7xt2H rectangle-7" data-id="1:72"></div><div class="risol-mayo-sosis-telur-L7xt2H risol-mayo-sosis-telur inter-semi-bold-black-18px" data-id="1:73">Risol Mayo<br>Sosis+Telur</div><div class="group-879-L7xt2H" data-id="1:74"><img class="image-19-BnQKrH" data-id="1:75" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/image-19-1@2x.png" alt="image 19"><img class="resep-risoles-mayonaise-BnQKrH" data-id="1:76" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/resep-risoles-mayonaise-1@2x.png" alt="Resep Risoles Mayonaise"></div></div><div class="group-838-T4Wby5" data-id="1:77"><div class="rectangle-7-pYDPlu rectangle-7" data-id="1:78"></div><div class="risol-mayo-sosis-coklat-pYDPlu risol-mayo-sosis-coklat inter-semi-bold-black-18px" data-id="1:79">Risol Mayo<br>Sosis+Coklat</div><img class="image-20-pYDPlu" data-id="1:80" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/image-20-1@2x.png" alt="image 20"><img class="donna-jos-sia-pYDPlu" data-id="1:81" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/donna-jos-sia-1@2x.png" alt="Donna Jos Sia"></div><div class="group-839-T4Wby5" data-id="1:82"><div class="rectangle-7-F9ncQu rectangle-7" data-id="1:83"></div><div class="risol-mayo-sosissayur-F9ncQu inter-semi-bold-black-18px" data-id="1:84">Risol Mayo<br>Sosis+sayur</div><img class="image-21-F9ncQu" data-id="1:85" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/image-21-1@2x.png" alt="image 21"><img class="download-1-F9ncQu" data-id="1:86" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/download--1--1@2x.png" alt="download (1)"></div><div class="group-840-T4Wby5" data-id="1:87"><div class="rectangle-7-sUnrFj rectangle-7" data-id="1:88"></div><div class="risol-mayo-sosis-ayam-sUnrFj risol-mayo-sosis-ayam inter-semi-bold-black-18px" data-id="1:89">Risol Mayo<br>Sosis+Ayam</div><img class="image-22-sUnrFj" data-id="1:90" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/image-22-1@2x.png" alt="image 22"><img class="premium-photo-_-riso-sUnrFj" data-id="1:91" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/premium-photo---risoles-with-ragout-filling-1@2x.png" alt="Premium Photo _ Risoles with Ragout Filling"></div><div class="group-841-T4Wby5" data-id="1:92"><div class="rectangle-7-fQZ45e rectangle-7" data-id="1:93"></div><div class="risol-mayo-sosis-wortel-fQZ45e risol-mayo-sosis-wortel inter-semi-bold-black-18px" data-id="1:94">Risol Mayo<br>Sosis+Wortel</div><img class="image-23-fQZ45e" data-id="1:95" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/image-23-1@2x.png" alt="image 23"><img class="resep-tigor-sayur-pedas-dari-wawawiati-fQZ45e" data-id="1:96" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/resep-tigor-sayur-pedas-dari--wawawiati-1@2x.png" alt="Resep Tigor Sayur Pedas dari @wawawiati"></div></div><div class="kategori-ULD3El inter-semi-bold-black-48px" data-id="1:97">Kategori</div><div class="group-843-ULD3El" data-id="1:98"><div class="rectangle-3-L8lGix rectangle-3" data-id="1:99"></div><div class="semua-kategori-L8lGix" data-id="1:100">Semua Kategori</div></div></div><div class="more-recipes-xVxyAW" data-id="1:101"><p class="cobalah-risolnya-dan-YSNoOx inter-semi-bold-black-48px" data-id="1:102">Cobalah Risolnya dan berikan<br>rating yang menarik!</p><p class="coba-dan-nikmatilah-YSNoOx inter-normal-black-16px" data-id="1:103">Coba dan nikmatilah risol mayo yang sangat enak, krispi dan rasakan lumeran<br>mayonesnya!</p><div class="group-866-YSNoOx group-866" data-id="1:104"><div class="group-831-8ExrQY group-831" data-id="1:105"><div class="group-829-XT2zzG group-829" data-id="1:106"><img class="timer" data-id="1:107" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:111">30 menit</div></div></div><div class="group-832-8ExrQY group-832" data-id="1:112"><div class="group-830-zZgzA1 group-830" data-id="1:113"><img class="fork-knife" data-id="1:114" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:118">Risol</div></div></div><img class="mask-group-8ExrQY mask-group" data-id="1:119" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-18@2x.png" alt="Mask Group"><div class="group-852-8ExrQY group-852" data-id="1:122"><div class="ellipse-4" data-id="1:123"></div><img class="heart-UY7y7M heart" data-id="1:124" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div><p class="risol-mayo-timun-sosis-8ExrQY inter-semi-bold-black-18px" data-id="1:127">Risol Mayo Timun + Sosis</p></div><div class="group-870-YSNoOx" data-id="1:128"><div class="group-831-G6hYaE group-831" data-id="1:129"><div class="group-829-qNj9tw group-829" data-id="1:130"><img class="timer" data-id="1:131" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:135">30 Menit</div></div></div><div class="group-832-G6hYaE group-832" data-id="1:136"><div class="group-830-2zaVxn group-830" data-id="1:137"><img class="fork-knife" data-id="1:138" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:142">Risol</div></div></div><img class="mask-group-G6hYaE mask-group" data-id="1:143" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-19@2x.png" alt="Mask Group"><div class="group-852-G6hYaE group-852" data-id="1:146"><div class="ellipse-4" data-id="1:147"></div><img class="heart-j4fQkg heart" data-id="1:148" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div><p class="risol-mayo-sosis-sayur-G6hYaE inter-semi-bold-black-18px" data-id="1:151">Risol Mayo Sosis + Sayur</p></div><div class="group-867-YSNoOx" data-id="1:152"><div class="group-831-QtDJlp group-831" data-id="1:153"><div class="group-829-7DKQP4 group-829" data-id="1:154"><img class="timer" data-id="1:155" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:159">30 Menit</div></div></div><div class="group-832-QtDJlp group-832" data-id="1:160"><div class="group-830-ClxC1o group-830" data-id="1:161"><img class="fork-knife" data-id="1:162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:166">Risol</div></div></div><img class="mask-group-QtDJlp mask-group" data-id="1:167" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-20@2x.png" alt="Mask Group"><div class="group-852-QtDJlp group-852" data-id="1:170"><div class="ellipse-4" data-id="1:171"></div><img class="heart-fxfpE5 heart" data-id="1:172" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-17@2x.png" alt="Heart"></div><p class="risol-mayo-sosis-telur-QtDJlp risol-mayo-sosis-telur inter-semi-bold-black-18px" data-id="1:175">Risol Mayo Sosis + Telur</p></div><div class="group-871-YSNoOx" data-id="1:176"><div class="group-831-OaGcCe group-831" data-id="1:177"><div class="group-829-XYTrGC group-829" data-id="1:178"><img class="timer" data-id="1:179" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:183">30 Menit</div></div></div><div class="group-832-OaGcCe group-832" data-id="1:184"><div class="group-830-EG5AMr group-830" data-id="1:185"><img class="fork-knife" data-id="1:186" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:190">Risol</div></div></div><img class="mask-group-OaGcCe mask-group" data-id="1:191" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-21@2x.png" alt="Mask Group"><div class="group-852-OaGcCe group-852" data-id="1:194"><div class="ellipse-4" data-id="1:195"></div><img class="heart-LbmTe5 heart" data-id="1:196" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-17@2x.png" alt="Heart"></div><p class="risol-mayo-sosis-ayam-OaGcCe risol-mayo-sosis-ayam inter-semi-bold-black-18px" data-id="1:199">Risol Mayo Sosis + Ayam</p></div><div class="group-868-YSNoOx" data-id="1:200"><div class="group-831-nt67Bx group-831" data-id="1:201"><div class="group-829-aUtuUu group-829" data-id="1:202"><img class="timer" data-id="1:203" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:207">30 Menit</div></div></div><div class="group-832-nt67Bx group-832" data-id="1:208"><div class="group-830-zGgCZi group-830" data-id="1:209"><img class="fork-knife" data-id="1:210" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:214">Risol</div></div></div><img class="mask-group-nt67Bx mask-group" data-id="1:215" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-22@2x.png" alt="Mask Group"><div class="group-852-nt67Bx group-852" data-id="1:218"><div class="ellipse-4" data-id="1:219"></div><img class="heart-AwVmPY heart" data-id="1:220" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div><p class="risol-mayo-sosis-coklat-nt67Bx risol-mayo-sosis-coklat inter-semi-bold-black-18px" data-id="1:223">Risol Mayo Sosis + Coklat</p></div><div class="group-872-YSNoOx" data-id="1:224"><div class="group-831-aRjcSF group-831" data-id="1:225"><div class="group-829-2tor8X group-829" data-id="1:226"><img class="timer" data-id="1:227" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:231">30 Menit</div></div></div><div class="group-832-aRjcSF group-832" data-id="1:232"><div class="group-830-xxXbH8 group-830" data-id="1:233"><img class="fork-knife" data-id="1:234" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:238">Risol</div></div></div><img class="mask-group-aRjcSF mask-group" data-id="1:239" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-23@2x.png" alt="Mask Group"><div class="group-852-aRjcSF group-852" data-id="1:242"><div class="ellipse-4" data-id="1:243"></div><img class="heart-OYi4q1 heart" data-id="1:244" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-17@2x.png" alt="Heart"></div><p class="risol-mayo-sosis-wortel-aRjcSF risol-mayo-sosis-wortel inter-semi-bold-black-18px" data-id="1:247">Risol Mayo Sosis + Wortel</p></div></div><div class="instagram-xVxyAW" data-id="1:248"><div class="rectangle-13-14tSxg" data-id="1:249"></div><div class="group-826-14tSxg group-826" data-id="1:250"><div class="rectangle-3-BtNt03 rectangle-3" data-id="1:251"></div><div class="group-833-BtNt03 group-833" data-id="1:260"><div class="visit-our-instagram-CxbwhJ" data-id="1:261">Visit Our Instagram</div></div></div><div class="group-857-14tSxg" data-id="1:262"><p class="check-out-kingdom_risol-on-instagram-aEYo1k inter-semi-bold-black-48px" data-id="1:263">Check out @kingdom_risol on Instagram</p><p class="buruan-cek-instagram-aEYo1k inter-normal-black-16px" data-id="1:264">Buruan cek Instagram kingdom_risol <br>karena terdapat diskon menarik untuk kamu</p></div></div><div class="subscribe-card-xVxyAW" data-id="1:265"><img class="mask-group-gKaU4I mask-group" data-id="1:266" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-33.png" alt="Mask Group"><div class="group-874-gKaU4I" data-id="1:272"><div class="order-sekarang-keburu-habis-CfxkCz inter-semi-bold-black-48px" data-id="1:273">Order Sekarang Keburu Habis!</div><p class="nikmati-setiap-perja-CfxkCz inter-normal-black-16px" data-id="1:274">Nikmati setiap perjalanan dengan memakan <br>Kingdom Risol Mayo</p><div class="rectangle-18-CfxkCz" data-id="1:275"></div><div class="your-email-address-CfxkCz" data-id="1:276">Your email address...</div><div class="group-826-CfxkCz group-826" data-id="1:277"><div class="rectangle-3-rCkMPl rectangle-3" data-id="1:278"></div><div class="subscribe-rCkMPl inter-semi-bold-white-14px" data-id="1:279">Subscribe</div></div></div></div><footer class="footer-xVxyAW" data-id="1:280"><div class="group-875-YuF6ZZ" data-id="1:281"><div class="kingdom-risol-UFcTyG kingdom-risol" data-id="1:282">KingdomRisol.</div><p class="solusi-enak-tepat-da-UFcTyG inter-normal-black-16px" data-id="1:283">Solusi enak, tepat, dan cepat dalam setiap risolmu</p></div><div class="group-824-YuF6ZZ group-824" data-id="1:284"><div class="blog-YlRr7e blog inter-medium-black-16px" data-id="1:285">Blog</div><div class="contact-YlRr7e contact inter-medium-black-16px" data-id="1:286">Contact</div><div class="about-us-YlRr7e about-us inter-medium-black-16px" data-id="1:287">About us</div></div><img class="vector-1-YuF6ZZ" data-id="1:288" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/vector-1-1.svg" alt="Vector 1"><div class="social-YuF6ZZ social" data-id="1:289"><img class="x001-facebook-CKyG7E x001-facebook" data-id="1:290" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/001-facebook-2@2x.png" alt="001-facebook"><div class="x004-instagram-CKyG7E x004-instagram" data-id="1:294"><img class="shape-z502sv shape" data-id="1:295" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/shape-6.svg" alt="Shape"><img class="shape-dLz6G0 shape" data-id="1:298" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/shape-7.svg" alt="Shape"><div class="oval" data-id="1:301"></div></div><div class="x004-instagram-N5UIo9 x004-instagram" data-id="12:5"><img class="shape-JTIymP shape" data-id="12:6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/shape-10.svg" alt="Shape"><img class="shape-zskgzx shape" data-id="12:9" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/shape-11.svg" alt="Shape"><div class="oval" data-id="12:12"></div></div></div></footer><div class="recipes-xVxyAW" data-id="1:302"><div class="review-kingdom-risol-HoLrRo inter-semi-bold-black-48px" data-id="1:303">Review Kingdom Risol</div><p class="terdapat-review-kons-HoLrRo inter-normal-black-16px" data-id="1:304">Terdapat Review Konsumen kingdom_risol yang menarik dan menggugah matamu</p><div class="group-858-HoLrRo" data-id="1:305"><div class="group-845-McvOCx group-845" data-id="1:306"><div class="rectangle-8-ZHj3cf rectangle-8" data-id="1:307"></div><div class="group-831-ZHj3cf group-831" data-id="1:308"><div class="group-829-rjkokQ group-829" data-id="1:309"><img class="timer" data-id="1:310" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:314">30 Menit</div></div></div><div class="group-832-ZHj3cf group-832" data-id="1:315"><div class="group-830-TZTUpI group-830" data-id="1:316"><img class="fork-knife" data-id="1:317" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:321">Risol</div></div></div><img class="mask-group-ZHj3cf mask-group" data-id="1:322" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/mask-group-24@2x.png" alt="Mask Group"><div class="group-852-ZHj3cf group-852" data-id="1:325"><div class="ellipse-4" data-id="1:326"></div><img class="heart-nUxSRm heart" data-id="1:327" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div><p class="risol-mayo-isian-sosis-timun inter-semi-bold-black-24px" data-id="1:330">Risol Mayo isian Sosis + Timun</p></div></div><div class="group-863-HoLrRo" data-id="1:331"><div class="group-845-ivKliH group-845" data-id="1:332"><div class="rectangle-8-iqJH8Q rectangle-8" data-id="1:333"></div><div class="group-831-iqJH8Q group-831" data-id="1:334"><div class="group-829-5p0J35 group-829" data-id="1:335"><img class="timer" data-id="1:336" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:340">30 Menit</div></div></div><div class="group-832-iqJH8Q group-832" data-id="1:341"><div class="group-830-ycgn1k group-830" data-id="1:342"><img class="fork-knife" data-id="1:343" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:347">Risol</div></div></div><img class="mask-group-iqJH8Q mask-group" data-id="1:348" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-25@2x.png" alt="Mask Group"><div class="group-852-iqJH8Q group-852" data-id="1:351"><div class="ellipse-4" data-id="1:352"></div><img class="heart-YZ25e1 heart" data-id="1:353" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div><p class="risol-mayo-isian-sosis-telur inter-semi-bold-black-24px" data-id="1:356">Risol Mayo isian Sosis + Telur</p></div></div><div class="group-861-HoLrRo" data-id="1:357"><div class="group-845-olxw5w group-845" data-id="1:358"><div class="rectangle-8-qGGZ2B rectangle-8" data-id="1:359"></div><div class="group-831-qGGZ2B group-831" data-id="1:360"><div class="group-829-g3EAXY group-829" data-id="1:361"><img class="timer" data-id="1:362" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:366">30 Menit</div></div></div><div class="group-832-qGGZ2B group-832" data-id="1:367"><div class="group-830-PxqC8u group-830" data-id="1:368"><img class="fork-knife" data-id="1:369" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:373">Risol</div></div></div><img class="mask-group-qGGZ2B mask-group" data-id="1:374" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-26@2x.png" alt="Mask Group"><div class="group-852-qGGZ2B group-852" data-id="1:377"><div class="ellipse-4" data-id="1:378"></div><img class="heart-IYQdmH heart" data-id="1:379" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div><p class="risol-mayo-isian-sosis-timun inter-semi-bold-black-24px" data-id="1:382">Risol Mayo isian Sosis + Timun</p></div></div><div class="group-859-HoLrRo" data-id="1:383"><div class="group-845-8cqVgY group-845" data-id="1:384"><div class="rectangle-8-EebyHL rectangle-8" data-id="1:385"></div><div class="group-831-EebyHL group-831" data-id="1:386"><div class="group-829-KlCtlw group-829" data-id="1:387"><img class="timer" data-id="1:388" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:392">30 Menit</div></div></div><div class="group-832-EebyHL group-832" data-id="1:393"><div class="group-830-erDMXR group-830" data-id="1:394"><img class="fork-knife" data-id="1:395" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:399">Risol</div></div></div><img class="mask-group-EebyHL mask-group" data-id="1:400" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-27@2x.png" alt="Mask Group"><p class="risol-mayo-isian-sosis-timun inter-semi-bold-black-24px" data-id="1:403">Risol Mayo isian Sosis + Timun</p></div><div class="group-852-8cqVgY group-852" data-id="1:404"><div class="ellipse-4" data-id="1:405"></div><img class="heart-8CZTGE heart" data-id="1:406" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div></div><div class="group-864-HoLrRo" data-id="1:409"><div class="group-845-hvMlqB group-845" data-id="1:410"><div class="rectangle-8-xFujiM rectangle-8" data-id="1:411"></div><div class="group-831-xFujiM group-831" data-id="1:412"><div class="group-829-kAkcXI group-829" data-id="1:413"><img class="timer" data-id="1:414" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:418">30 Menit</div></div></div><div class="group-832-xFujiM group-832" data-id="1:419"><div class="group-830-LP92QI group-830" data-id="1:420"><img class="fork-knife" data-id="1:421" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:425">Risol</div></div></div><img class="mask-group-xFujiM mask-group" data-id="1:426" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-28@2x.png" alt="Mask Group"><p class="risol-mayo-isian-sosis-timun inter-semi-bold-black-24px" data-id="1:429">Risol Mayo isian Sosis + Timun</p></div><div class="group-852-hvMlqB group-852" data-id="1:430"><div class="ellipse-4" data-id="1:431"></div><img class="heart-GnB6rx heart" data-id="1:432" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div></div><div class="group-862-HoLrRo" data-id="1:435"><div class="group-845-dus6xD group-845" data-id="1:436"><div class="rectangle-8-Wglr0S rectangle-8" data-id="1:437"></div><div class="group-831-Wglr0S group-831" data-id="1:438"><div class="group-829-Pl9Fz6 group-829" data-id="1:439"><img class="timer" data-id="1:440" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:444">30 Menit</div></div></div><div class="group-832-Wglr0S group-832" data-id="1:445"><div class="group-830-t0NJLH group-830" data-id="1:446"><img class="fork-knife" data-id="1:447" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:451">Risol</div></div></div><img class="mask-group-Wglr0S mask-group" data-id="1:452" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-29@2x.png" alt="Mask Group"><p class="risol-mayo-isian-sosis-timun inter-semi-bold-black-24px" data-id="1:455">Risol Mayo isian Sosis + Timun</p></div><div class="group-852-dus6xD group-852" data-id="1:456"><div class="ellipse-4" data-id="1:457"></div><img class="heart-pdFStM heart" data-id="1:458" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div></div><div class="group-866-HoLrRo group-866" data-id="1:461"><div class="group-845-9uXHhi group-845" data-id="1:462"><div class="rectangle-8-Tx6xnu rectangle-8" data-id="1:463"></div><div class="group-831-Tx6xnu group-831" data-id="1:464"><div class="group-829-QH6zH6 group-829" data-id="1:465"><img class="timer" data-id="1:466" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:470">30 Menit</div></div></div><div class="group-832-Tx6xnu group-832" data-id="1:471"><div class="group-830-eeBbxa group-830" data-id="1:472"><img class="fork-knife" data-id="1:473" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:477">Risol</div></div></div><img class="mask-group-Tx6xnu mask-group" data-id="1:478" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-30@2x.png" alt="Mask Group"><p class="risol-mayo-isian-sosis-telur inter-semi-bold-black-24px" data-id="1:481">Risol Mayo isian Sosis + telur</p></div><div class="group-852-9uXHhi group-852" data-id="1:482"><div class="ellipse-4" data-id="1:483"></div><img class="heart-FvIUey heart" data-id="1:484" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div></div><div class="group-860-HoLrRo" data-id="1:487"><div class="group-845-l16DTu group-845" data-id="1:488"><div class="rectangle-8-CFiikQ rectangle-8" data-id="1:489"></div><div class="group-831-CFiikQ group-831" data-id="1:490"><div class="group-829-x7LH0A group-829" data-id="1:491"><img class="timer" data-id="1:492" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:496">30 Menit</div></div></div><div class="group-832-CFiikQ group-832" data-id="1:497"><div class="group-830-8bHMeD group-830" data-id="1:498"><img class="fork-knife" data-id="1:499" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:503">Risol</div></div></div><img class="mask-group-CFiikQ mask-group" data-id="1:504" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/mask-group-31@2x.png" alt="Mask Group"><p class="risol-mayo-sosis-timun-CFiikQ risol-mayo-sosis-timun inter-semi-bold-black-24px" data-id="1:507">Risol Mayo Sosis + Timun</p><div class="group-852-CFiikQ group-852" data-id="1:508"><div class="ellipse-4" data-id="1:509"></div><img class="heart-k8xpXg heart" data-id="1:510" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div></div></div><div class="group-865-HoLrRo" data-id="1:513"><div class="group-845-bx4IpM group-845" data-id="1:514"><div class="rectangle-8-gQQ4rC rectangle-8" data-id="1:515"></div><div class="group-831-gQQ4rC group-831" data-id="1:516"><div class="group-829-tQMLdi group-829" data-id="1:517"><img class="timer" data-id="1:518" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/timer-16@2x.png" alt="Timer"><div class="x30-menit inter-medium-black-14px" data-id="1:522">30 Menit</div></div></div><div class="group-832-gQQ4rC group-832" data-id="1:523"><div class="group-830-AjTiHR group-830" data-id="1:524"><img class="fork-knife" data-id="1:525" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/forkknife-16@2x.png" alt="ForkKnife"><div class="risol inter-medium-black-14px" data-id="1:529">Risol</div></div></div><img class="mask-group-gQQ4rC mask-group" data-id="1:530" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/mask-group-32@2x.png" alt="Mask Group"><p class="risol-mayo-isian-sosis-timun inter-semi-bold-black-24px" data-id="1:533">Risol Mayo isian Sosis + Timun</p></div><div class="group-852-bx4IpM group-852" data-id="1:534"><div class="ellipse-4" data-id="1:535"></div><img class="heart-fZMI5V heart" data-id="1:536" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/heart-15@2x.png" alt="Heart"></div></div></div><div class="learn-more-xVxyAW" data-id="1:539"><div class="group-853-RJ9xsH" data-id="1:540"><p class="semua-dapat-menikmati-muda-mudi-gen-z-QkJ5V0 inter-semi-bold-black-48px" data-id="1:541">Semua dapat menikmati<br>Muda Mudi Gen-Z</p><p class="kemudahan-dalam-seti-QkJ5V0 inter-normal-black-16px" data-id="1:542">Kemudahan dalam setiap gigitan terdapat pada kingdom risol mayo<br>selamat menikmati ya!</p><div class="group-826-QkJ5V0 group-826" data-id="1:543"><div class="rectangle-3-luEBf3 rectangle-3" data-id="1:544"></div><div class="selanjutnya-luEBf3 inter-semi-bold-white-14px" data-id="1:545">Selanjutnya</div></div></div><div class="group-880-RJ9xsH" data-id="1:546"><div class="rectangle-8-rqa5bB rectangle-8" data-id="1:547"></div><img class="risol-mayo-1-rqa5bB" data-id="1:548" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/risol-mayo--1--1.png" alt="risol mayo (1)"></div></div><img class="vector-2-xVxyAW" data-id="1:549" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/679fd8a3d0a79ab59a80caf6/img/vector-2-1.svg" alt="Vector 2"><img class="whats-app-image-2025-02-04-at-212757-xVxyAW whats-app-image-2025-02-04-at-212757" data-id="1:550" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/whatsapp-image-2025-02-04-at-21-27-57-1.png" alt="WhatsApp Image 2025-02-04 at 21.27.57"><img class="whats-app-image-2025-02-04-at-212757-6iAz2g whats-app-image-2025-02-04-at-212757" data-id="1:552" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/whatsapp-image-2025-02-04-at-21-27-57-1.png" alt="WhatsApp Image 2025-02-04 at 21.27.57"><img class="whats-app-image-2025-02-04-at-212751-xVxyAW" data-id="1:553" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/whatsapp-image-2025-02-04-at-21-27-51-1.png" alt="WhatsApp Image 2025-02-04 at 21.27.51"><img class="images-removebg-preview-1-xVxyAW" data-id="12:2" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/images-removebg-preview-1-1.png" alt="images-removebg-preview 1"><img class="images-removebg-preview-2-xVxyAW" data-id="12:3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/679fd72a439dd9fcf8bf2163/releases/67a228c9f83578f56be55b7b/img/images-removebg-preview-1-1.png" alt="images-removebg-preview 2"></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
